@@ -16,5 +16,5 @@ root_volume_type         = "gp2"
 root_volume_size         = 8
 iam_instance_profile     = null
 subnet_id_ec2            = "subnet-0aade558b97319d86"
-security_group_ids       = "sg-09a1e6e668e0e62df"
+security_group_ids       = ["sg-09a1e6e668e0e62df"]
 # admin_ip_cidr            = "0.0.0.0/0"

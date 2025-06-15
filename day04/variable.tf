@@ -59,7 +59,7 @@ variable "subnet_id_ec2" {
   
 }
 variable "security_group_ids" {
-    type = string
+    type = list()
   
 }
 variable "AWS_ACCESS_KEY" {
