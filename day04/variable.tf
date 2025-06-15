@@ -58,7 +58,7 @@ variable "subnet_id_ec2" {
     type = string
   
 }
-variable "security_groupid" {
+variable "security_group_ids" {
     type = string
   
 }
