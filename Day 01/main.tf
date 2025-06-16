@@ -1,12 +1,18 @@
-terraform {
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "= 6.0.0"
-    }
-  }
-}
-
-provider "aws" {
-  region = "us-east-1"
+module "web_server_1" {
+  source = "./module/ec2"
+  
+  name_prefix                = "${var.project_name}-web-server-1"
+  ami_id                     = var.web_server_ami
+  instance_type              = var.web_server_instance_type
+  subnet_id                  = var.subnet_id_ec2
+  security_group_ids         = var.security_group_ids
+  key_name                   = var.ssh_key_name
+  associate_public_ip_address = true
+  user_data_script          = "${path.root}/script/nginx.sh"
+  
+  root_volume_type           = var.root_volume_type
+  root_volume_size           = var.root_volume_size
+  iam_instance_profile       = var.iam_instance_profile
+  
+  tags = var.tags
 }
