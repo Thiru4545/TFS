@@ -11,7 +11,7 @@ tags = {
 # EC2 settings
 web_server_ami           = "ami-084568db4383264d4"
 web_server_instance_type = "t2.micro"
-ssh_key_name             = "Terraform"
+ssh_key_name             = "Terrraform"
 root_volume_type         = "gp2"
 root_volume_size         = 8
 iam_instance_profile     = null
